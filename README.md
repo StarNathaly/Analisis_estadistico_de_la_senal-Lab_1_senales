@@ -7,7 +7,7 @@ Este laboratorio, realizado en Python a través de Google Colab, muestra los est
 
 INSTRUCCIONES PARA EL USO DEL CÓDIGO.
 
-1. Visita la página de PhysioNet: PhysioNet.
+1. Visita la página de PhysioNet: https://physionet.org/
 2. Haz clic en el recuadro que dice "Data".
 3. Al ingresar, aparecerá el título "Open Databases". Todos los títulos en azul corresponden a las bases de datos disponibles. Estas bases de datos provienen de exámenes realizados a diferentes personas para monitorear su salud o verificar su caso médico. Puedes explorar las bases de datos, pero para este código, se recomienda buscar archivos que contengan "Database" en su nombre. Al abrir estos archivos y bajar hasta el final de la página, encontrarás una sección llamada "Files" con archivos similares entre sí, como 1001.dat, 1001.hea, 1002.dat, 1002.hea, etc.
 4. Escoge el archivo que desees, pero asegúrate de descargar tanto el archivo que termina en "hea" como el que termina en "dat", ya que son complementarios y necesarios para que el código funcione correctamente. Por ejemplo, puedes descargar fetal_PCG_p01_GW_36.dat y fetal_PCG_p01_GW_36.hea.

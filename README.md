@@ -5,6 +5,8 @@ DESCRIPCIÓN DEL LABORATORIO.
 
 Este laboratorio, realizado en Python a través de Google Colab, muestra los estadísticos descriptivos de una función seleccionada por el usuario. Puedes calcular la media, desviación estándar, coeficiente de variación, función de probabilidad e histogramas de la señal cargada. Además, se añaden tres tipos de ruidos generados por código para simular un SNR (Signal-to-Noise Ratio) afectado por el ruido y otro donde la señal de interés es más clara.
 
+
+
 INSTRUCCIONES PARA EL USO DEL CÓDIGO.
 
 1. Visita la página de PhysioNet: https://physionet.org/
@@ -20,5 +22,17 @@ DATOS DE IMPORTANCIA PARA EL CÓDIGO.
 1. El código incluye numerosos comentarios que explican la mayoría de las líneas y cómo funcionan, lo cual te ayudará a orientarte y modificarlo según tus necesidades.
 2. El archivo por defecto en el código es fetal_PCG_p01_GW_36.dat. Es necesario cambiarlo por el archivo de tu preferencia.
 3. El código contiene explicaciones sobre la base de datos utilizada, el concepto de SNR, cómo interpretar los resultados, y detalles sobre las gráficas para facilitar su interpretación.
-4. El análisis y las gráficas se realizan con un máximo de 5000 muestras, ya que el total es de 400,000. Puedes ajustar este número modificando la variable muestra_valores. Si cambias el número de muestras, también es recomendable ajustar la longitud de los tres ruidos a la misma longitud para mantener la concordancia en la gráfica.
-5. Si deseas utilizar el archivo base que utilicé, en la sección donde dice "IMPORTANTE" debajo de los resultados de los estadísticos descriptivos, tiene en su último renglón el link de la base de datos donde obtuve el archivo.
+4. El análisis y las gráficas se realizan con un máximo de 5000 muestras, ya que el total es de 400,000. Puedes ajustar este número modificando la variable muestra_valores. Si cambias el número de muestras (muestra_valores), también es recomendable ajustar la longitud de los tres ruidos a la misma longitud para mantener la concordancia en la gráfica.
+5. La señal utilizada se encontro en la base de datos de physionet. Un PCG es una fonocardiografía fetal, se obtuvo de diferentes mujeres embarazadas durante los últimos meses de sus embarazos fisiológicos de feto único (semana 30-40), las mujeres estaban sanas y tenían de un rango entre 25 y 35 años.
+
+Para aclarar el eje de las gráficas, los datos se digitalizaron con una frecuencia de muestreo de 333 Hz a 8 bits ADC
+El eje x en la gráfica vuelve el muestro a tiempo, lo que sería 1/333 Hz, lo que daría que las muestras se toman cada 3 ms
+El eje y en la gráfica sería la intensidad del sonido detectato en bits por el ADC, pero se deja únicamente como amplitud 
+
+El SNR son las siglas para el significado relación señal-Ruido, define la relación entre la potencia de la señal que se necesita y el ruido
+La señal es la que se transmite y se puede decir que el ruido es que el nos corrompe a información
+El SNR nos ayuda a tener una idea de la calidad de las señales, ya que nos puede dar una mejor imagen y sabremos qué es lo que medimos
+Como análisis general, un SNR más bajo o negativo con cualquiera de las señales de ruido, indica que este ruido tiene un impacto mayor en la señal, reduciendo su calidad.
+Mientras que un SNR más alto indica que la señal es relativamente clara y menos afectada por el ruido en ese caso 
+
+Aquí está algunos archivos para PCG de donde tomé mi gráfica : https://physionet.org/content/fpcgdb/1.0.0/ 
